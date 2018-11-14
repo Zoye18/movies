@@ -1,0 +1,363 @@
+/*Global classes
+*** Rows and Columns
+*** Heading
+*** Displaying
+*** width/Height
+*** Padding
+*** Margin
+*** Font styles
+*** Color
+*** Helper Boxes
+*/
+
+/*Rows and Columns*/
+.row {
+	display: flex;
+	width: 100%;
+}
+.row::after {
+	display: none;
+	clear: both;
+	content: "";
+}
+.col-1 { width: 8.33%; }
+.col-2 { width: 16.66%; }
+.col-3{ width: 25%; }
+.col-4{ width: 33.33%; }
+.col-5{ width: 41.66%; }
+.col-6{ width: 50%; }
+.col-7{ width: 58.33%; }
+.col-8{ width: 66.66%; }
+.col-9{ width: 75%; }
+.col-10{ width: 83.33%; }
+.col-11{ width: 91.66%; }
+.col-12{ width: 100%; }
+* {
+	box-sizing: border-box;
+}
+
+/* Elements */
+ul {
+	padding: 0;
+	list-style: none;
+}
+/* Heading */
+.h1 {
+	font-size: 25px;
+	margin: 18px 0;
+	font-weight: 700;
+}
+.h2 {
+	font-size: 22px;
+	margin: 15px 0;
+	font-weight: 700;
+}
+.h3 {
+	font-size: 20px;
+	margin: 13px 0;
+	font-weight: 700;
+}
+.h4 {
+	font-size: 18px;
+	margin: 10px 0;
+	font-weight: 600;
+}
+.h5 {
+	font-size: 16px;
+	margin: 8px 0;
+	font-weight: 600;
+}
+.h6 {
+	font-size: 14px;
+	margin: 5px 0;
+	font-weight: 400;
+}
+
+/*Display*/
+.flex {
+	display: flex;
+}
+.block {
+	display: block;
+}
+.none {
+	display: none !important;
+}
+
+/* Width/Height*/
+.max-height-100 {
+	max-height: 100%;
+}
+.height-100 {
+	height: 100%;
+}
+.height-50 {
+	height: 50%;
+}
+.max-width-100 {
+	max-width: 100%;
+}
+.width-100 {
+	width: 100%
+}
+.width-50 {
+	width: 50%;
+}
+
+/*Padding*/
+.p-0 {
+	padding: 0;
+}
+.p-5 {
+	padding: 5px;
+}
+.p-10 {
+	padding: 10px;
+}
+.p-15 {
+	padding: 15px;
+}
+.p-20 {
+	padding: 20px;
+}
+/* padding-top */
+.p-t-0 {
+	padding-top: 0;
+}
+.p-t-5 {
+	padding-top: 5;
+}
+.p-t-10 {
+	padding-top: 10;
+}
+.p-t-15 {
+	padding-top: 15;
+}
+.p-t-20 {
+	padding-top: 20;
+}
+/* padding-bottom */
+.p-b-0 {
+	padding-bottom: 0;
+}
+.p-b-5 {
+	padding-bottom: 5;
+}
+.p-b-10 {
+	padding-bottom: 10;
+}
+.p-b-15 {
+	padding-bottom: 15;
+}
+.p-b-20 {
+	padding-bottom: 20;
+}
+/* padding-left */
+.p-l-0 {
+	padding-left: 0;
+}
+.p-l-5 {
+	padding-left: 5;
+}
+.p-l-10 {
+	padding-left: 10;
+}
+.p-l-15 {
+	padding-left: 15;
+}
+.p-l-20 {
+	padding-left: 20;
+}
+/* padding-right */
+.p-r-0 {
+	padding-right: 0;
+}
+.p-r-5 {
+	padding-right: 5;
+}
+.p-r-10 {
+	padding-right: 10;
+}
+.p-r-15 {
+	padding-right: 15;
+}
+.p-r-20 {
+	padding-right: 20;
+}
+
+/*Margin*/
+.m-0 {
+	margin: 0;
+}
+.m-auto {
+	margin: 0 auto;
+}
+.m-5 {
+	margin: 5px;
+}
+.m-10 {
+	margin: 10px;
+}
+.m-15 {
+	margin: 15px;
+}
+.m-20 {
+	margin: 20px;
+}
+/* margin-top */
+.m-t-0 {
+	margin-top: 0;
+}
+.m-t-5 {
+	margin-top: 5;
+}
+.m-t-10 {
+	margin-top: 10;
+}
+.m-t-15 {
+	margin-top: 15;
+}
+.m-t-20 {
+	margin-top: 20;
+}
+/* margin-bottom */
+.m-b-0 {
+	margin-bottom: 0;
+}
+.m-b-5 {
+	margin-bottom: 5;
+}
+.m-b-10 {
+	margin-bottom: 10;
+}
+.m-b-15 {
+	margin-bottom: 15;
+}
+.m-b-20 {
+	margin-bottom: 20;
+}
+/* margin-left */
+.m-l-0 {
+	margin-left: 0;
+}
+.m-l-5 {
+	margin-left: 5;
+}
+.m-l-10 {
+	margin-left: 10;
+}
+.m-l-15 {
+	margin-left: 15;
+}
+.m-l-20 {
+	margin-left: 20;
+}
+/* margin-right */
+.m-r-0 {
+	margin-right: 0;
+}
+.m-r-5 {
+	margin-right: 5;
+}
+.m-r-10 {
+	margin-right: 10;
+}
+.m-r-15 {
+	margin-right: 15;
+}
+.m-r-20 {
+	margin-right: 20;
+}
+
+/* Font Styles */
+.fs-11 {
+	font-size: 11px;
+}
+.fs-12 {
+	font-size: 12px;
+}
+.fs-14 {
+	font-size: 14px;
+}
+.fs-16 {
+	font-size: 16px;
+}
+.fs-18 {
+	font-size: 18px;
+}
+.fs-20 {
+	font-size: 20px !important;
+}
+font-bold {
+	font-weight: bold;
+}
+font-normal {
+	font-weight: normal;
+}
+font-light {
+	font-weight: lighter;
+}
+
+/* Color */
+.white {
+	color: #fff;
+}
+.danger {
+	color: red;
+}
+.warning {
+	color: #ffc107;
+}
+.bg_white {
+	background-color: #fff;
+}
+.light_gray {
+	color: #bfbfbf;
+}
+.black {
+	color: #000;
+}
+.primary {
+	color: #004986;
+}
+.bg_primary {
+	background-color: #004986;
+}
+.gray {
+	color: #ebebeb;
+}
+.bg_gray {
+	background-color: #ebebeb;
+}
+
+/*Helper Boxes */
+.rounded {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+.global_btn, .global_btn_rounded {
+	border: 2px solid #bfbfbf;
+    padding: 7px 15px;
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    color: #5f5d5d;
+    border-radius: 10px;
+    text-transform: uppercase;
+/*	transform: scaleZ(0.8);*/
+	transition: all 0.2s ease-in-out;
+}
+.global_btn_rounded {
+	border-radius: 25px;
+}
+.global_btn_rounded:hover {
+	background-color: #bfbfbf;
+	color: #333;
+	cursor: pointer;
+	transform: perspective(150px) scaleZ(1.2) translateZ(15px);
+}
+.global_btn:hover {
+	background-color: #bfbfbf;
+	cursor: pointer;
+}

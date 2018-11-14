@@ -1,0 +1,44 @@
+#autocomplete_list {
+	width: 80%;
+	display: flex;
+}
+#search_field {
+	width: 70%;
+	border-color: silver !important;
+}
+#search_field:focus, #search_field:active, #search_field:hover {
+	border-color: silver !important;
+}
+.search_btn {
+	width: 30%;
+	background-color: #007bff;
+	color: white;
+	text-decoration: none;
+}
+
+.result_box {
+	margin: 20px auto;
+	padding: 10px 5px;
+	border: 1px solid silver;
+	border-radius: 10px;
+}
+ul.movie_list {
+	border-top: 1px solid silver;
+	border-bottom: 1px solid silver;
+	padding: 10px;
+}
+
+.description_holder, .movie_main_info_holder  {
+	padding: 0 10px;
+}
+.add_movie {
+	float: right;
+	padding: 5px 15px;
+    border: 1px solid silver;
+    background-color: #4a86c6;
+    color: white;
+}
+.add_movie a.add_movie_btn{
+	text-decoration: none;
+	color: #fff;
+}
