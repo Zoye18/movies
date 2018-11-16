@@ -1,6 +1,7 @@
 <link href="./css/main.css" type="text/css" rel="stylesheet">
 <link href="./css/class.css" type="text/css" rel="stylesheet">
 <link href="./css/font-awesome.min.css"  type="text/css" rel="stylesheet">
+<script src="./js/jquery-3.3.1.min.js"></script>
 <?php
 
 header('Content-Type: text/html; charset=utf-8');
@@ -25,8 +26,6 @@ ini_set('display_startup_errors', 1);
 	}
 	
 	$conn->set_charset('utf8');
-	
-	
 	
 	$sql = "SELECT
 				movies.title, 
@@ -54,7 +53,7 @@ ini_set('display_startup_errors', 1);
 		<div class="movies">
 			<div class="movie_box">
 				<div class="add_new_holder">
-					<a href="http://localhost/movies/index.html" clas="add" id="add_new">Add New</a>
+					<a href="http://localhost/movies/index.php" clas="add" id="add_new">Add New</a>
 				</div>
 				<div class="movie_table">
 					<table>
@@ -77,7 +76,7 @@ ini_set('display_startup_errors', 1);
 								while($row = $result->fetch_assoc()) { 
 									if($i < 5 ) { 
 									$i++; ?>
-						  			<tr>
+						  			<tr class="movie_information" id="my_movies">
 							
 										<td id="movie_poster"><?php echo $row['poster'];?></td>
 										<td id="movie_title"><?php echo $row['title'];?></td> 
@@ -109,7 +108,26 @@ ini_set('display_startup_errors', 1);
 				</div>
 				
 				<?php endif; ?>
-<!--				load more should be ajax to load next 5 movies from datatbase-->
+				<script type="text/javascript">
+					function load_more() {
+						var movie_row = $("#my_movies");
+
+						jQuery.ajax({
+							type: "POST",
+							dataType: "json", 
+							url: "http://localhost/movies/get_movie.php",
+
+							success: function(data){
+									
+									if(data) {
+										$.each(data, function(index, value) {
+											console.log(value);
+										});
+									}
+							}
+						});
+					}
+				</script>
 			</div>
 		</div>
 <?php } ?>

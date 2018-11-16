@@ -40,11 +40,15 @@
 		while($row = $result->fetch_assoc()) {
 			if($row['id'] >4) {
 				$movies[] = $row;
-				echo '<pre>';
-				print_r($movies);
 				
+				
+			} else {
+				unset($row['id']);
 			}
 		}
 	}
+//	echo '<pre>';
+//	print_r($movies);
+	echo json_encode($movies);
 ?>
 					
